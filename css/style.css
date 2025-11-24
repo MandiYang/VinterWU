@@ -1,1 +1,52 @@
-body {background-color: #e74c3c;}
+#container {
+    display: grid;
+    background-color: #e74c3c;;
+    height: 150vh;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: 200px 1fr 1fr 150px;
+    grid-template-areas: 
+        'hd hd'
+        'mn mn'
+        'sec app'
+        'ft ft'
+}
+#Appen{
+    grid-area: app;
+    background-color: white;
+}
+.btn:hover{
+    filter: brightness(90%);
+    transform: scale(1.02);
+}
+
+.btn {
+  transition-duration: 0.3s;
+}
+
+header{
+    grid-area: hd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main{
+    grid-area: mn;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url(/img/gymbg.jpg);
+    background-size:cover;
+    background;
+    color: #e74c3c;
+}
+
+section{
+    grid-area: sec;
+    background-color: white;
+}
+
+footer{
+    grid-area: ft;
+    background-color: grey;
+}
