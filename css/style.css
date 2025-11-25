@@ -43,6 +43,9 @@ main{
 
 section{
     grid-area: sec;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
     background-color: white;
 }
 
