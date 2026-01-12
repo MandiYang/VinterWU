@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap');
+@keyframes myAnimation {
+  from {color: black;}
+  to {color: white;}
+}
 
 #container {
     display: grid;
@@ -18,7 +22,7 @@
 #guide {
     display: grid;
     background-color: #e74c3c;
-    height: 200vh;
+    height: 300vh;
     gap: 10px;
     padding: 10px;
     grid-template-columns: 1fr 1fr;
@@ -35,14 +39,13 @@
     height: 230vh;
     gap: 10px;
     padding: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 250px 1fr 1fr 240px;
+    grid-template-columns:1fr;
+    grid-template-rows: 60px 250px 1fr 240px;
     grid-template-areas: 
-        'hd hd'
-        'mn mn'
-        'sec1 sec2'
-        'sec3 sec4'
-        'ft ft'
+        'hd'
+        'mn'
+        'workouts'
+        'ft'
 }
 
 #Appen{
@@ -66,10 +69,6 @@
     width: 500px;
 }
 
-#sellpoint{
-    font-size: large;
-}
-
 #logo{
     width: 140px;
 }
@@ -82,6 +81,15 @@
 .btn {
     transition-duration: 0.3s;
     width: 220px;
+}
+
+.guide_img{
+    width: 400px;
+    border-radius: 100px;
+}
+
+.img_notround{
+    width: 200px;
 }
 
 header{
@@ -115,15 +123,26 @@ header nav a:hover{
 
 #startpage{
     grid-area: mn;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)),
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
     url(/img/gymbg.jpg);
     background-size:cover;
     border-radius: 10px;
-    color:purple
+    color:white;
+    animation-name: myAnimation;
+    animation-duration: 4s;
+}
+
+#startpage h2{
+    font-size: xxx-large;
+}
+
+#startpage p{
+    font-size: x-large;
 }
 
 main{
     grid-area: mn;
+    align-content: center;
     border-radius: 10px;
     background-color: #EECF6D;
     padding: 20px;
@@ -139,40 +158,27 @@ section{
     border-radius: 10px;
 }
 
-section1{
-    grid-area: sec1;
+.workouts {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column; 
-    background-color: #EECF6D;
-}
-
-section2{
-    grid-area: sec2;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column; 
-    background-color: #EECF6D;
-}
-
-section3{
-    grid-area: sec3;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column; 
-    background-color: #EECF6D;
-}
-
-section4{
-    grid-area: sec4;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column; 
-    background-color: #EECF6D;
+    grid-area: workouts;
+    flex-wrap: wrap;  
+    justify-content: center;
+    padding: 20px;
+    gap: 15px;
+    
 }
 
 .content-section{
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;    
+    gap: 16px;              
+    background:#EECF6D;
+    padding: 20px;
+    border-radius: 16px;
+    flex: 1 1 400px;        
+    max-width: 600px;
 }
 
 footer{
@@ -180,7 +186,7 @@ footer{
     background-color: #6A5D7B;
     border-radius: 10px;
     padding: 10px;
-    color: aliceblue;
+    color: white;
 }
 
 body {
@@ -191,11 +197,12 @@ body {
 h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
 }
+
 h1{
     letter-spacing: -0.5px;
 }
 
 iframe{
-    width: 617px;
+    width: 100%;
     height: 100%;
 }
