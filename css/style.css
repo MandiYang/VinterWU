@@ -7,11 +7,11 @@
 #container {
     display: grid;
     background-color: #e74c3c;
-    height: 210vh;
+    height: 230vh;
     gap: 10px;
     padding: 10px;
     grid-template-columns: 5fr 4fr;
-    grid-template-rows: 60px 1fr 1fr 250px;
+    grid-template-rows: 70px 440px 1fr 275px;
     grid-template-areas: 
         'hd hd'
         'mn mn'
@@ -22,11 +22,11 @@
 #guide {
     display: grid;
     background-color: #e74c3c;
-    height: 300vh;
+    height: 320vh;
     gap: 10px;
     padding: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 1fr 250px;
+    grid-template-rows: 70px 1fr 275px;
     grid-template-areas: 
         'hd hd'
         'mn mn'
@@ -40,7 +40,7 @@
     gap: 10px;
     padding: 10px;
     grid-template-columns:1fr;
-    grid-template-rows: 60px 250px 1fr 250px;
+    grid-template-rows: 70px 265px 1fr 275px;
     grid-template-areas: 
         'hd'
         'mn'
@@ -54,9 +54,9 @@
     justify-items: center;
     align-items: start;
     grid-template-columns: 1fr 1fr; 
-    gap: 5px;
+    gap: 10px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 35px;
 }
 
 #Appen h2 {
@@ -66,19 +66,23 @@
 
 #mobile_img{
     grid-column: 1 / span 2;
-    width: 500px;
+    width: 520px;
 }
 
 #logo{
     width: 140px;
 }
 
-.btn:hover{
+.btn{
+    line-height: 0;
+}
+
+.btn img:hover{
     filter: brightness(90%);
     transform: scale(1.02);
 }
 
-.btn {
+.btn img{
     transition-duration: 0.3s;
     width: 220px;
 }
@@ -133,11 +137,13 @@ header nav a:hover{
 }
 
 #startpage h2{
-    font-size: xxx-large;
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #startpage p{
     font-size: x-large;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 main{
@@ -146,6 +152,7 @@ main{
     border-radius: 10px;
     background-color: #EECF6D;
     padding: 20px;
+    font-size: 18px;
 }
 
 section{
@@ -156,6 +163,7 @@ section{
     padding: 10px;
     background-color: #EECF6D;
     border-radius: 10px;
+    font-size: 18px;
 }
 
 .workouts {
@@ -164,7 +172,7 @@ section{
     flex-wrap: wrap;  
     justify-content: center;
     padding: 20px;
-    gap: 15px;
+    gap: 20px;
     
 }
 
@@ -177,8 +185,8 @@ section{
     background:#EECF6D;
     padding: 20px;
     border-radius: 15px;
-    flex: 1 1 400px;        
-    max-width: 600px;
+    flex: 1 1 350px;        
+    max-width: 500px;
 }
 
 .content-section iframe{
@@ -195,6 +203,7 @@ footer{
     border-radius: 10px;
     padding: 10px;
     color: white;
+    font-size: 18px;
 }
 
 body {
@@ -208,4 +217,8 @@ h1, h2, h3 {
 
 h1{
     letter-spacing: -0.5px;
+}
+
+#head_title{
+    font-size: xxx-large;
 }
